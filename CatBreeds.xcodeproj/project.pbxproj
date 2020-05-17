@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		77276F092470166D00A1A753 /* BreedDatailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77276F082470166D00A1A753 /* BreedDatailsController.swift */; };
 		77276F0B24701E3300A1A753 /* BreedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77276F0A24701E3300A1A753 /* BreedTableCell.swift */; };
-		77276F0D247088E000A1A753 /* GallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77276F0C247088E000A1A753 /* GallaryCollectionViewCell.swift */; };
 		773D673F246E8BFE00948828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D673E246E8BFE00948828 /* AppDelegate.swift */; };
 		773D6741246E8BFE00948828 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6740246E8BFE00948828 /* SceneDelegate.swift */; };
 		773D6743246E8BFE00948828 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6742246E8BFE00948828 /* BreedsViewController.swift */; };
@@ -19,12 +18,14 @@
 		773D674D246E8C0F00948828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773D674B246E8C0F00948828 /* LaunchScreen.storyboard */; };
 		773D6755246E8D7400948828 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6754246E8D7400948828 /* GalleryViewController.swift */; };
 		773D6759246EF8A700948828 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6758246EF8A700948828 /* Breeds.swift */; };
+		77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */; };
+		77A240E52471A762006549FE /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */; };
+		77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E62471B08C006549FE /* ImageViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77276F082470166D00A1A753 /* BreedDatailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDatailsController.swift; sourceTree = "<group>"; };
 		77276F0A24701E3300A1A753 /* BreedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedTableCell.swift; sourceTree = "<group>"; };
-		77276F0C247088E000A1A753 /* GallaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		773D673B246E8BFE00948828 /* CatBreeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBreeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773D673E246E8BFE00948828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773D6740246E8BFE00948828 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		773D674E246E8C0F00948828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		773D6754246E8D7400948828 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		773D6758246EF8A700948828 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
+		77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		77A240E62471B08C006549FE /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 				773D6758246EF8A700948828 /* Breeds.swift */,
 				773D6744246E8BFE00948828 /* QuizViewController.swift */,
 				773D6754246E8D7400948828 /* GalleryViewController.swift */,
-				77276F0C247088E000A1A753 /* GallaryCollectionViewCell.swift */,
+				77A240E62471B08C006549FE /* ImageViewerViewController.swift */,
+				77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */,
+				77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */,
 				773D6746246E8BFE00948828 /* Main.storyboard */,
 				773D6749246E8C0F00948828 /* Assets.xcassets */,
 				773D674B246E8C0F00948828 /* LaunchScreen.storyboard */,
@@ -144,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				773D674D246E8C0F00948828 /* LaunchScreen.storyboard in Resources */,
+				77A240E52471A762006549FE /* PhotoCollectionViewCell.xib in Resources */,
 				773D674A246E8C0F00948828 /* Assets.xcassets in Resources */,
 				773D6748246E8BFE00948828 /* Main.storyboard in Resources */,
 			);
@@ -157,14 +164,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				773D6759246EF8A700948828 /* Breeds.swift in Sources */,
+				77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */,
 				77276F0B24701E3300A1A753 /* BreedTableCell.swift in Sources */,
 				773D6745246E8BFE00948828 /* QuizViewController.swift in Sources */,
 				773D6743246E8BFE00948828 /* BreedsViewController.swift in Sources */,
 				773D6755246E8D7400948828 /* GalleryViewController.swift in Sources */,
 				773D673F246E8BFE00948828 /* AppDelegate.swift in Sources */,
 				773D6741246E8BFE00948828 /* SceneDelegate.swift in Sources */,
+				77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */,
 				77276F092470166D00A1A753 /* BreedDatailsController.swift in Sources */,
-				77276F0D247088E000A1A753 /* GallaryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

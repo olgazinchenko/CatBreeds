@@ -7,24 +7,23 @@
 //
 
 import UIKit
-
 class ImageViewerViewController: UIViewController {
-
+    
+    @IBOutlet weak var fullImageView: UIImageView!
+    
+    var imageName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupImageView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupImageView() {
+        guard let name = imageName else { return }
+        
+        if let image = UIImage(named: name) {
+            fullImageView.image = image
+        }
     }
-    */
 
 }
