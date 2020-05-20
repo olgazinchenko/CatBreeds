@@ -1,5 +1,5 @@
 //
-//  Breeds.swift
+//  Breed.swift
 //  CatBreeds
 //
 //  Created by Olga on 15.05.2020.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class Breeds: Codable {
+class Breed: Codable {
     let id: String
     let name: String
     let temperament: String
@@ -19,4 +19,17 @@ class Breeds: Codable {
         self.name = name
         self.temperament = temperament
     }
+}
+
+struct Photo: Decodable {
+    var url: String
+    var id: String
+}
+
+struct Quiz: Decodable {
+//    var id: String
+//    var name: String
+    var url: String
+    var breeds: [Breed]
+    
 }

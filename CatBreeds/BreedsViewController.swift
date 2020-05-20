@@ -14,12 +14,13 @@ class BreedsViewController: UITableViewController {
     
     private let url = URL(string: "https://api.thecatapi.com/v1/breeds?api_key=51c52522-9f54-4dfc-bf99-0dc082a3143b")
     
-    private var catBreeds = [Breeds]()
+    var catBreeds = [Breed]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJSON()
         tableBreetView.tableFooterView = UIView()
+        
     }
     
     func downloadJSON() {
@@ -32,7 +33,7 @@ class BreedsViewController: UITableViewController {
             print("Downloaded")
             do {
                 let decoder = JSONDecoder()
-                let dowloadedBreeds = try decoder.decode([Breeds].self, from: data)
+                let dowloadedBreeds = try decoder.decode([Breed].self, from: data)
                 self.catBreeds = dowloadedBreeds
                 DispatchQueue.main.async {
                     self.tableBreetView.reloadData()
@@ -70,4 +71,3 @@ class BreedsViewController: UITableViewController {
     }
     
 }
-

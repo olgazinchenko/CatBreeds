@@ -17,7 +17,7 @@
 		773D674A246E8C0F00948828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773D6749246E8C0F00948828 /* Assets.xcassets */; };
 		773D674D246E8C0F00948828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773D674B246E8C0F00948828 /* LaunchScreen.storyboard */; };
 		773D6755246E8D7400948828 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6754246E8D7400948828 /* GalleryViewController.swift */; };
-		773D6759246EF8A700948828 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6758246EF8A700948828 /* Breeds.swift */; };
+		773D6759246EF8A700948828 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D6758246EF8A700948828 /* Breed.swift */; };
 		77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */; };
 		77A240E52471A762006549FE /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */; };
 		77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E62471B08C006549FE /* ImageViewerViewController.swift */; };
@@ -36,7 +36,7 @@
 		773D674C246E8C0F00948828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		773D674E246E8C0F00948828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		773D6754246E8D7400948828 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		773D6758246EF8A700948828 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
+		773D6758246EF8A700948828 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		77A240E62471B08C006549FE /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				773D6742246E8BFE00948828 /* BreedsViewController.swift */,
 				77276F0A24701E3300A1A753 /* BreedTableCell.swift */,
 				77276F082470166D00A1A753 /* BreedDatailsController.swift */,
-				773D6758246EF8A700948828 /* Breeds.swift */,
+				773D6758246EF8A700948828 /* Breed.swift */,
 				773D6744246E8BFE00948828 /* QuizViewController.swift */,
 				773D6754246E8D7400948828 /* GalleryViewController.swift */,
 				77A240E62471B08C006549FE /* ImageViewerViewController.swift */,
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773D6759246EF8A700948828 /* Breeds.swift in Sources */,
+				773D6759246EF8A700948828 /* Breed.swift in Sources */,
 				77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */,
 				77276F0B24701E3300A1A753 /* BreedTableCell.swift in Sources */,
 				773D6745246E8BFE00948828 /* QuizViewController.swift in Sources */,

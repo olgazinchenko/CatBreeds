@@ -13,7 +13,7 @@ class BreedDatailsController: UIViewController {
     @IBOutlet weak var breedNameLabel: UILabel!
     @IBOutlet weak var temperamentLabel: UILabel!
     
-    var breed: Breeds?
+    var breed: Breed?
     
     override func viewDidLoad() {
         super.viewDidLoad()

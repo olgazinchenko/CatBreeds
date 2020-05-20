@@ -181,38 +181,44 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="QuizViewController" customModule="CatBreeds" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleAspectFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hPk-qL-vB5">
-                                <rect key="frame" x="79" y="306" width="256" height="284.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hPk-qL-vB5">
+                                <rect key="frame" x="79" y="266" width="256" height="364.5"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the breed by the photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4FT-Ma-rmk">
-                                        <rect key="frame" x="58" y="35" width="140" height="137.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4FT-Ma-rmk">
+                                        <rect key="frame" x="8" y="30" width="240" height="237.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="t78-EF-IFk"/>
-                                            <constraint firstAttribute="height" constant="140" id="ykJ-Rd-G8G"/>
+                                            <constraint firstAttribute="width" constant="240" id="17V-LN-YsR"/>
+                                            <constraint firstAttribute="height" constant="240" id="ldx-Gw-cMR"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-d8-3GL">
-                                        <rect key="frame" x="78" y="184" width="100.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-d8-3GL" userLabel="Breed Name Label">
+                                        <rect key="frame" x="78" y="274" width="100.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-BE-rLS">
-                                        <rect key="frame" x="81.5" y="214.5" width="93" height="30"/>
+                                        <rect key="frame" x="81.5" y="299.5" width="93" height="30"/>
                                         <state key="normal" title="Show Answer"/>
+                                        <connections>
+                                            <action selector="showAnswerAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="09s-c2-6HI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asf-lp-GCc">
-                                        <rect key="frame" x="89.5" y="254.5" width="77" height="30"/>
-                                        <state key="normal" title="Next Breed"/>
+                                        <rect key="frame" x="112" y="334.5" width="32" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextCatAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="YbK-UG-F3J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -225,6 +231,12 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="gamecontroller.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="breedNameLabel" destination="Pl8-d8-3GL" id="WPS-qk-rVl"/>
+                        <outlet property="nextCatButton" destination="Asf-lp-GCc" id="pem-ev-GSG"/>
+                        <outlet property="quizCatImage" destination="4FT-Ma-rmk" id="1wX-qg-F9M"/>
+                        <outlet property="showAnswerButton" destination="fLX-BE-rLS" id="7DT-Ry-pyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

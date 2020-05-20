@@ -9,9 +9,10 @@
 import UIKit
 class ImageViewerViewController: UIViewController {
     
+    
     @IBOutlet weak var fullImageView: UIImageView!
     
-    var imageName: String!
+    var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +20,7 @@ class ImageViewerViewController: UIViewController {
     }
     
     private func setupImageView() {
-        guard let name = imageName else { return }
-        
-        if let image = UIImage(named: name) {
-            fullImageView.image = image
-        }
+        fullImageView.image = image
     }
 
 }
