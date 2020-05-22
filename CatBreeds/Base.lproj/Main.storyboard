@@ -186,15 +186,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hPk-qL-vB5">
-                                <rect key="frame" x="79" y="266" width="256" height="364.5"/>
+                                <rect key="frame" x="79" y="248.5" width="256" height="399.5"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the breed by the photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4FT-Ma-rmk">
-                                        <rect key="frame" x="8" y="30" width="240" height="237.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quiz_cat" translatesAutoresizingMaskIntoConstraints="NO" id="4FT-Ma-rmk">
+                                        <rect key="frame" x="8" y="29" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="17V-LN-YsR"/>
                                             <constraint firstAttribute="height" constant="240" id="ldx-Gw-cMR"/>
@@ -220,6 +220,13 @@
                                             <action selector="nextCatAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="YbK-UG-F3J"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6I-3z-PPF">
+                                        <rect key="frame" x="111" y="369.5" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startQuizAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="VLh-bc-xab"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -236,6 +243,7 @@
                         <outlet property="nextCatButton" destination="Asf-lp-GCc" id="pem-ev-GSG"/>
                         <outlet property="quizCatImage" destination="4FT-Ma-rmk" id="1wX-qg-F9M"/>
                         <outlet property="showAnswerButton" destination="fLX-BE-rLS" id="7DT-Ry-pyC"/>
+                        <outlet property="startQuizButton" destination="k6I-3z-PPF" id="x9a-SX-m4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -284,7 +292,7 @@
     <resources>
         <image name="gamecontroller.fill" catalog="system" width="128" height="82"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="quiz_cat" width="668" height="638"/>
         <image name="square.grid.3x2.fill" catalog="system" width="128" height="80"/>
     </resources>
 </document>
