@@ -1,5 +1,5 @@
 # CatBreeds
-Here you can find the copleted test task for MacPow internship program: https://macpaw.com/careers/macos-ios-intern
+Here you can find the copleted test task for MacPaw internship program: https://macpaw.com/careers/macos-ios-intern
 
 <b>"Breeds" screen</b> with a list of cat breeds dowloaded from: https://api.thecatapi.com/
 
