@@ -30,6 +30,7 @@
 		90C170AD295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170AC295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift */; };
 		90C170AF295F58BC003D4CF4 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170AE295F58BC003D4CF4 /* UsesAutoLayout.swift */; };
 		90C170B129655E9D003D4CF4 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170B029655E9D003D4CF4 /* GalleryView.swift */; };
+		90C170B32965603F003D4CF4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170B22965603F003D4CF4 /* QuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		90C170AC295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		90C170AE295F58BC003D4CF4 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		90C170B029655E9D003D4CF4 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		90C170B22965603F003D4CF4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */,
 				77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */,
 				90C170B029655E9D003D4CF4 /* GalleryView.swift */,
+				90C170B22965603F003D4CF4 /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				773D6741246E8BFE00948828 /* SceneDelegate.swift in Sources */,
 				77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */,
 				90C170B129655E9D003D4CF4 /* GalleryView.swift in Sources */,
+				90C170B32965603F003D4CF4 /* QuizView.swift in Sources */,
 				90C170AA295DAD8E003D4CF4 /* Fonts.swift in Sources */,
 				77276F092470166D00A1A753 /* BreedDatailsController.swift in Sources */,
 			);

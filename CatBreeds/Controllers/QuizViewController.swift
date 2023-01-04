@@ -24,12 +24,12 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
-    var quizView: GalleryView {
-        return view as! GalleryView
+    var quizView: QuizView {
+        return view as! QuizView
     }
     
     override func loadView() {
-        view = GalleryView(frame: UIScreen.main.bounds)
+        view = QuizView(frame: UIScreen.main.bounds)
     }
     
     

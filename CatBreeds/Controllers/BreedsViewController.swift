@@ -68,7 +68,7 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BreedDatailsController {
-            destination.breed = catBreeds[breedBrowseView.breedTable.indexPathForSelectedRow!.row]
+//            destination.breed = catBreeds[breedBrowseView.breedTable.indexPathForSelectedRow!.row]
         }
     }
 }

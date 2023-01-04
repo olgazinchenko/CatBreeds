@@ -6,9 +6,9 @@
 //  Copyright © 2020 Olga. All rights reserved.
 //
 
-//import UIKit
-//
-//class BreedDatailsController: UIViewController {
+import UIKit
+
+class BreedDatailsController: UIViewController {
 //    
 //    @IBOutlet weak var breedNameLabel: UILabel!
 //    @IBOutlet weak var temperamentLabel: UILabel!
@@ -20,4 +20,4 @@
 //        breedNameLabel.text = "🐱 \(breed?.name ?? "⁉️")"
 //        temperamentLabel.text = "Temperament: \(breed?.temperament ?? "⁉️")"
 //    }
-//}
+}
