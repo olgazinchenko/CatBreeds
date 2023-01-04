@@ -58,7 +58,7 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableCell") as? BreedTableCell else { return UITableViewCell() }
-        cell.configure(labelName: catBreeds[indexPath.row].name)
+        cell.configure(name: catBreeds[indexPath.row].name, photo: (UIImage(named: "quiz_cat")!))
         return cell
     }
 

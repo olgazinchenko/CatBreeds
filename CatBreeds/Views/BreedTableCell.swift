@@ -9,12 +9,12 @@
 import UIKit
 
 class BreedTableCell: UITableViewCell {
-
-//    var breedNameLabel = {
-//        var label = UILabel()
-//        label.textColor = Colors.black
-//        return label
-//    }()
+    @UsesAutoLayout
+    var photo: UIImageView = {
+        var photo = UIImageView()
+        photo.contentMode = .scaleAspectFit
+        return photo
+    }()
     @UsesAutoLayout
     var name: UILabel = {
         let name = UILabel()
@@ -22,6 +22,8 @@ class BreedTableCell: UITableViewCell {
         name.font = Fonts.body
         return name
       }()
+    
+    internal static let thumbnailHeightWidth: CGFloat = 44.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,15 +35,21 @@ class BreedTableCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSubview(photo)
         addSubview(name)
         
         //MARK: Constrains
+        photo.centerYAnchor.constraint(equalTo: centerYAnchor).activate()
+        photo.leadingAnchor.constraint(equalTo: leadingAnchor).activate()
+        photo.heightAnchor.constraint(equalToConstant: BreedTableCell.thumbnailHeightWidth).activate()
+        photo.widthAnchor.constraint(equalToConstant: BreedTableCell.thumbnailHeightWidth).activate()
+        name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 8.0).activate()
         name.centerYAnchor.constraint(equalTo: centerYAnchor).activate()
-        name.leadingAnchor.constraint(equalTo: leadingAnchor).activate()
     }
     
-    func configure(labelName: String) {
-        self.name.text = labelName
+    func configure(name: String, photo: UIImage) {
+        self.name.text = name
+        self.photo.image = photo
     }
     
     required init?(coder: NSCoder) {
