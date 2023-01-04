@@ -8,23 +8,28 @@
 
 import UIKit
 
-class BreedsViewController: UITableViewController {
+class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var tableBreetView: UITableView!
+
+    var breedBrowseView: BreedBrowseView {
+        return view as! BreedBrowseView
+    }
     
-    private let url = URL(string: "https://api.thecatapi.com/v1/breeds?api_key=51c52522-9f54-4dfc-bf99-0dc082a3143b")
+    override func loadView() {
+        view = BreedBrowseView(frame: UIScreen.main.bounds)
+        title = "Breeds"
+        breedBrowseView.setupTable(dataSource: self, delegate: self)
+    }
     
     var catBreeds = [Breed]()
     
+    private let url = URL(string: "https://api.thecatapi.com/v1/breeds?api_key=51c52522-9f54-4dfc-bf99-0dc082a3143b")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJSON()
     }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Cat Breeds"
-    }
-    
+
     func downloadJSON() {
         guard url != nil else { return }
         URLSession.shared.dataTask(with: url!) { (data, urlResponse, error) in
@@ -38,31 +43,32 @@ class BreedsViewController: UITableViewController {
                 let dowloadedBreeds = try decoder.decode([Breed].self, from: data)
                 self.catBreeds = dowloadedBreeds
                 DispatchQueue.main.async {
-                    self.tableBreetView.reloadData()
+                    self.breedBrowseView.breedTable.reloadData()
                 }
             } catch {
                 print("Something went wront after downloading! :(")
             }
         }.resume()
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return catBreeds.count
+
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BreedCell") as? BreedTableCell else { return UITableViewCell() }
-        cell.breedNameLabel.text = catBreeds[indexPath.row].name
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableCell") as? BreedTableCell else { return UITableViewCell() }
+        cell.configure(labelName: catBreeds[indexPath.row].name)
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetails", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BreedDatailsController {
-            destination.breed = catBreeds[tableBreetView.indexPathForSelectedRow!.row]
+            destination.breed = catBreeds[breedBrowseView.breedTable.indexPathForSelectedRow!.row]
         }
     }
 }

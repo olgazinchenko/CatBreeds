@@ -23,6 +23,14 @@
 		77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */; };
 		77A240E52471A762006549FE /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */; };
 		77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A240E62471B08C006549FE /* ImageViewerViewController.swift */; };
+		90C170A0295CD47F003D4CF4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1709F295CD47F003D4CF4 /* MainTabBarViewController.swift */; };
+		90C170A2295D5310003D4CF4 /* BreedBrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170A1295D5310003D4CF4 /* BreedBrowseView.swift */; };
+		90C170A4295D562E003D4CF4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170A3295D562E003D4CF4 /* QuizView.swift */; };
+		90C170A6295D7407003D4CF4 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170A5295D7407003D4CF4 /* GalleryView.swift */; };
+		90C170A8295D7C8B003D4CF4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170A7295D7C8B003D4CF4 /* Colors.swift */; };
+		90C170AA295DAD8E003D4CF4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170A9295DAD8E003D4CF4 /* Fonts.swift */; };
+		90C170AD295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170AC295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift */; };
+		90C170AF295F58BC003D4CF4 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C170AE295F58BC003D4CF4 /* UsesAutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		77A240E62471B08C006549FE /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		90C1709F295CD47F003D4CF4 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		90C170A1295D5310003D4CF4 /* BreedBrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedBrowseView.swift; sourceTree = "<group>"; };
+		90C170A3295D562E003D4CF4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		90C170A5295D7407003D4CF4 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		90C170A7295D7C8B003D4CF4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		90C170A9295DAD8E003D4CF4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		90C170AC295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		90C170AE295F58BC003D4CF4 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +95,9 @@
 				773D673E246E8BFE00948828 /* AppDelegate.swift */,
 				773D6740246E8BFE00948828 /* SceneDelegate.swift */,
 				777DF2022477CA2100C0DC0D /* Controllers */,
-				777DF2032477CA7C00C0DC0D /* Cells */,
+				777DF2032477CA7C00C0DC0D /* Views */,
 				777DF2042477CA9B00C0DC0D /* Data Models */,
+				90C170AB295F567B003D4CF4 /* Support files */,
 				773D6746246E8BFE00948828 /* Main.storyboard */,
 				773D6749246E8C0F00948828 /* Assets.xcassets */,
 				773D674B246E8C0F00948828 /* LaunchScreen.storyboard */,
@@ -92,6 +109,7 @@
 		777DF2022477CA2100C0DC0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				90C1709F295CD47F003D4CF4 /* MainTabBarViewController.swift */,
 				773D6742246E8BFE00948828 /* BreedsViewController.swift */,
 				77276F082470166D00A1A753 /* BreedDatailsController.swift */,
 				773D6744246E8BFE00948828 /* QuizViewController.swift */,
@@ -101,14 +119,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		777DF2032477CA7C00C0DC0D /* Cells */ = {
+		777DF2032477CA7C00C0DC0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				90C170A1295D5310003D4CF4 /* BreedBrowseView.swift */,
 				77276F0A24701E3300A1A753 /* BreedTableCell.swift */,
 				77A240E22471A762006549FE /* PhotoCollectionViewCell.swift */,
 				77A240E32471A762006549FE /* PhotoCollectionViewCell.xib */,
+				90C170A3295D562E003D4CF4 /* QuizView.swift */,
+				90C170A5295D7407003D4CF4 /* GalleryView.swift */,
 			);
-			path = Cells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		777DF2042477CA9B00C0DC0D /* Data Models */ = {
@@ -117,8 +138,19 @@
 				773D6758246EF8A700948828 /* Breed.swift */,
 				777DF2052477CB4800C0DC0D /* Photo.swift */,
 				777DF2072477CC7000C0DC0D /* Quiz.swift */,
+				90C170A7295D7C8B003D4CF4 /* Colors.swift */,
+				90C170A9295DAD8E003D4CF4 /* Fonts.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		90C170AB295F567B003D4CF4 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				90C170AC295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift */,
+				90C170AE295F58BC003D4CF4 /* UsesAutoLayout.swift */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +180,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = Olga;
 				TargetAttributes = {
 					773D673A246E8BFE00948828 = {
@@ -194,9 +226,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				773D6759246EF8A700948828 /* Breed.swift in Sources */,
+				90C170A2295D5310003D4CF4 /* BreedBrowseView.swift in Sources */,
+				90C170A4295D562E003D4CF4 /* QuizView.swift in Sources */,
+				90C170A8295D7C8B003D4CF4 /* Colors.swift in Sources */,
 				77A240E42471A762006549FE /* PhotoCollectionViewCell.swift in Sources */,
 				777DF2082477CC7000C0DC0D /* Quiz.swift in Sources */,
+				90C170AF295F58BC003D4CF4 /* UsesAutoLayout.swift in Sources */,
+				90C170AD295F57D5003D4CF4 /* NSLayoutConstraintExtension.swift in Sources */,
+				90C170A0295CD47F003D4CF4 /* MainTabBarViewController.swift in Sources */,
 				77276F0B24701E3300A1A753 /* BreedTableCell.swift in Sources */,
+				90C170A6295D7407003D4CF4 /* GalleryView.swift in Sources */,
 				773D6745246E8BFE00948828 /* QuizViewController.swift in Sources */,
 				773D6743246E8BFE00948828 /* BreedsViewController.swift in Sources */,
 				773D6755246E8D7400948828 /* GalleryViewController.swift in Sources */,
@@ -204,6 +243,7 @@
 				777DF2062477CB4800C0DC0D /* Photo.swift in Sources */,
 				773D6741246E8BFE00948828 /* SceneDelegate.swift in Sources */,
 				77A240E72471B08C006549FE /* ImageViewerViewController.swift in Sources */,
+				90C170AA295DAD8E003D4CF4 /* Fonts.swift in Sources */,
 				77276F092470166D00A1A753 /* BreedDatailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +296,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -316,6 +357,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
