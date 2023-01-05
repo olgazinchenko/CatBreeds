@@ -11,7 +11,7 @@ import UIKit
 struct Fonts {
   static let heading = UIFont(name: "HelveticaNeue-Bold", size: 24.0)!
   static let subheading = UIFont(name: "HelveticaNeue", size: 18.0)!
-  static let body = UIFont(name: "HelveticaNeue", size: 16.0)!
+  static let body = UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
   static let button = UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
   static let label = UIFont(name: "HelveticaNeue", size: 18.0)!
 }

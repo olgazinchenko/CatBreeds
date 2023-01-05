@@ -15,6 +15,8 @@ class BreedBrowseView: UIView {
     internal var breedTable: UITableView = {
         let table = UITableView()
         table.backgroundColor = Colors.space
+        table.separatorColor = Colors.tial
+        table.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return table
     }()
     
@@ -29,8 +31,8 @@ class BreedBrowseView: UIView {
         
         // MARK: Constraints
         breedTable.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).activate()
-        breedTable.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).activate()
-        breedTable.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).activate()
+        breedTable.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 8.0).activate()
+        breedTable.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).activate()
         breedTable.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).activate()
     }
     

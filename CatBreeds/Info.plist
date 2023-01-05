@@ -45,6 +45,8 @@
 	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
+		<key>Status bar style</key>
+		<string>Dark Content</string>
 		<key>UINavigationBar</key>
 		<dict>
 			<key>Style</key>
@@ -52,6 +54,8 @@
 			<key>Translucent</key>
 			<false/>
 		</dict>
+		<key>View controller-based status bar appearance</key>
+		<false/>
 	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

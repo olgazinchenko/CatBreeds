@@ -13,7 +13,9 @@ class MainTabBarViewController: UITabBarController {
     internal static let tabs = ["Breeds", "Quiz", "Gallery"]
     
     init() {
+        Colors.changeDefaults()
         super.init(nibName: nil, bundle: nil)
+        
         let breedsViewController = UINavigationController(rootViewController: BreedsViewController())
         breedsViewController.tabBarItem = UITabBarItem(title: MainTabBarViewController.tabs[0], image: UIImage(systemName: "list.bullet"), selectedImage: nil)
         let quizViewController = QuizViewController()

@@ -16,8 +16,10 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func loadView() {
+        UIApplication.shared.sta
         view = BreedBrowseView(frame: UIScreen.main.bounds)
-        title = "Breeds"
+        view.backgroundColor = Colors.black
+        title = MainTabBarViewController.tabs[0]
         breedBrowseView.setupTable(dataSource: self, delegate: self)
     }
     
@@ -62,13 +64,13 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "showDetails", sender: self)
+//    }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BreedDatailsController {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? BreedDatailsController {
 //            destination.breed = catBreeds[breedBrowseView.breedTable.indexPathForSelectedRow!.row]
-        }
-    }
+//        }
+//    }
 }
