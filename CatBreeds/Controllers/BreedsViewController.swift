@@ -16,9 +16,8 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func loadView() {
-        UIApplication.shared.sta
         view = BreedBrowseView(frame: UIScreen.main.bounds)
-        view.backgroundColor = Colors.black
+        view.backgroundColor = Colors.space
         title = MainTabBarViewController.tabs[0]
         breedBrowseView.setupTable(dataSource: self, delegate: self)
     }

@@ -50,7 +50,7 @@ class BreedTableCell: UITableViewCell {
     func configure(name: String, photo: UIImage) {
         self.name.text = name
         self.photo.image = photo
-        BreedTableCell.appearance().backgroundColor = Colors.space
+ //       BreedTableCell.appearance().backgroundColor = Colors.space
     }
     
     required init?(coder: NSCoder) {

@@ -14,8 +14,6 @@ class BreedBrowseView: UIView {
     
     internal var breedTable: UITableView = {
         let table = UITableView()
-        table.backgroundColor = Colors.space
-        table.separatorColor = Colors.tial
         table.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return table
     }()
@@ -26,7 +24,6 @@ class BreedBrowseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = Colors.space
         addSubview(breedTable)
         
         // MARK: Constraints
@@ -41,4 +38,6 @@ class BreedBrowseView: UIView {
         breedTable.delegate = delegate
         breedTable.register(BreedTableCell.self, forCellReuseIdentifier: "\(BreedTableCell.self)")
     }
+    
+    
 }

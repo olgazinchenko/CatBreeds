@@ -16,14 +16,17 @@ public struct Colors {
     static let space = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
     
     static func changeDefaults() {
-        UITabBar.appearance().barTintColor = black
+        UITabBar.appearance().barTintColor = space
+        UITabBar.appearance().backgroundColor = space
         UITabBar.appearance().tintColor = tial
+        UITableView.appearance().backgroundColor = space
+        UITableViewCell.appearance().backgroundColor = space
         _ = [.normal, .selected].map {
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: black, NSAttributedString.Key.font: Fonts.subheading], for: $0)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: tial, NSAttributedString.Key.font: Fonts.subheading], for: $0)
         }
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: tial, NSAttributedString.Key.font: Fonts.heading]
         _ = [.normal, .selected].map {
-              UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: black, NSAttributedString.Key.font: Fonts.subheading], for: $0)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: tial, NSAttributedString.Key.font: Fonts.subheading], for: $0)
         }
     }
 }
