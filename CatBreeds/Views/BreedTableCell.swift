@@ -43,15 +43,28 @@ class BreedTableCell: UITableViewCell {
         photo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0).activate()
         photo.heightAnchor.constraint(equalToConstant: BreedTableCell.thumbnailHeightWidth).activate()
         photo.widthAnchor.constraint(equalToConstant: BreedTableCell.thumbnailHeightWidth).activate()
-        name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 4.0).activate()
+        name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 8.0).activate()
         name.centerYAnchor.constraint(equalTo: centerYAnchor).activate()
     }
     
     func configure(name: String, photo: UIImage) {
         self.name.text = name
-        self.photo.image = photo
- //       BreedTableCell.appearance().backgroundColor = Colors.space
+        let url = URL(string: "https://cdn2.thecatapi.com/images/9x1zk_Qdr.jpg")!
+        loadImage(by: url)
     }
+    
+    func loadImage(by url: URL) {
+        DispatchQueue.global().async { [self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.photo.image = image
+                    }
+                }
+            }
+        }
+    }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
